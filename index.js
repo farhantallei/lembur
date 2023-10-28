@@ -7640,5 +7640,6 @@ class o$ {
 var export_t = W0.Type;
 
 // src/index.ts
-var app = new o$().get("/", () => "Hello Elysia").listen(3000);
+var port = Number(Bun.env.PORT) || 3000;
+var app = new o$().get("/", () => "Hello Elysia").listen(port);
 console.log(`\uD83E\uDD8A Elysia is running at ${app.server?.hostname}:${app.server?.port}`);
